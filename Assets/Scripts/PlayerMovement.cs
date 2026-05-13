@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
             Anim.SetTrigger("takeoff");
         }
 
-        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && rb.linearVelocityY > 0f)
+        if ((Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space)) && rb.linearVelocityY > 0f)
         {
             rb.linearVelocityY *= 0.67f;
         }
