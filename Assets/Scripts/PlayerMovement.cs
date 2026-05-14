@@ -27,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded &&(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
-            rb.linearVelocityY = jumpSpeed;
+            //rb.linearVelocityY = jumpSpeed;
+            rb.AddForceY(jumpSpeed * 50f);
             Anim.SetTrigger("takeoff");
         }
 
@@ -54,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
             rb.linearDamping = 0f;
         }
 
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            rb.linearVelocityX = 0f;
+        }
+
         Anim.SetBool("isJumping", !isGrounded);
     }
     private void FixedUpdate()
@@ -72,9 +78,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.linearVelocityX = 0f;
             Anim.SetBool("isRunning", false);
         }
+
+
+
     }
 
     //for deubgs

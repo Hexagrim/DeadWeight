@@ -10,13 +10,14 @@ public class MouseCam : MonoBehaviour
     public CinemachineCamera Cam;
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        // this is way too twig like lmao
+        if (Input.GetMouseButtonDown(0))
         {
             lastMousePosition = Input.mousePosition;
         }
 
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
 
             Vector3 delta = Input.mousePosition - lastMousePosition;
