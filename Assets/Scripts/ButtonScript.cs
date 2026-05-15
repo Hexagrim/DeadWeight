@@ -29,6 +29,10 @@ public class ButtonScript : MonoBehaviour
         {
             ConnectedBehaviour.GetComponent<DoorScript>().open = pressed;
         }
+        else if (ConnectedBehaviour.GetComponent<PistonScript>())
+        {
+            ConnectedBehaviour.GetComponent<PistonScript>().pushed = pressed;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
