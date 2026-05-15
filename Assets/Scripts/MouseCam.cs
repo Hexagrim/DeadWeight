@@ -8,12 +8,14 @@ public class MouseCam : MonoBehaviour
     private Vector3 lastMousePosition;
     public Transform playerTransform;
     public CinemachineCamera Cam;
+
     void Update()
     {
         // this is way too twig like lmao
         if (Input.GetMouseButtonDown(0))
         {
             lastMousePosition = Input.mousePosition;
+            Cam.transform.position = FindFirstObjectByType<Camera>().transform.position;
         }
 
 
