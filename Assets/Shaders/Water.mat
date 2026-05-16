@@ -58,11 +58,11 @@ Material:
     - _LineLength: 0
     - _WaveCount: 1
     - _WaveFlowDirection: 1
-    - _WaveSize: 0.2
-    - _WaveSpeed: 0.6
+    - _WaveSize: 0.1
+    - _WaveSpeed: 2
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _BodyColor: {r: 0, g: 0.6043427, b: 1, a: 1}
+    - _BodyColor: {r: 0, g: 0.35958576, b: 1, a: 1}
     - _LineColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

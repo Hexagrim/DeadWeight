@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7962879545837253845}
   - component: {fileID: 5091050808333637705}
   - component: {fileID: 1305824057601552743}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FeetRight
   m_TagString: Corpse
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -500,7 +500,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 7352087801186775550}
   - component: {fileID: 6007248887133097869}
   - component: {fileID: 898607710615327442}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FeetLeft
   m_TagString: Corpse
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -1251,7 +1251,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -1342,7 +1342,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -1549,7 +1549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498590967156268988}
   - component: {fileID: 6034197448503663285}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: LegLeft (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -1640,7 +1640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3560011893787755506}
   - component: {fileID: 3016752630371032666}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FeetLeft (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1709,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 2469565649239489605}
   - component: {fileID: 1858010476603997857}
   - component: {fileID: 3793974504570289477}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: LegLeft
   m_TagString: Corpse
   m_Icon: {fileID: 0}
@@ -1805,7 +1805,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -1963,7 +1963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 948799313179380217}
   - component: {fileID: 2186462693955506088}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: LegRight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2032,7 +2032,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -2149,7 +2149,7 @@ GameObject:
   - component: {fileID: 7596914440328106675}
   - component: {fileID: 8042775380880177190}
   - component: {fileID: 6275473511038565713}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: LegRight
   m_TagString: Corpse
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -2451,7 +2451,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.745283, g: 0.7199508, b: 0.622241, a: 1}
@@ -7593,7 +7593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2856202621336482507}
   - component: {fileID: 8716572016712997309}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: FeetRight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7662,7 +7662,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}

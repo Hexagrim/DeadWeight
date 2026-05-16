@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
-
+    public LayerMask waterLayer;
     public bool isGrounded;
     void Start()
     {
@@ -25,7 +25,13 @@ public class PlayerMovement : MonoBehaviour
             groundLayer
         );
 
-        if(isGrounded &&(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+        bool isInWater = Physics2D.OverlapCircle(
+            groundCheck.position,
+            checkRadius,
+            waterLayer
+        );
+
+        if ((isInWater || isGrounded) &&(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
             //rb.linearVelocityY = jumpSpeed;
             rb.AddForceY(jumpSpeed * 50f);
