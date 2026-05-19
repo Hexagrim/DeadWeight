@@ -28,15 +28,18 @@ public class GameManager : MonoBehaviour
 
     public void Next(string l)
     {
+        if (done) return;
         StartCoroutine(NextLevel(l));
+        done = true;
     }
     IEnumerator NextLevel(string l)
     {
         T_Anim.SetTrigger("fade");
         FindFirstObjectByType<PlayerMovement>().GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        FindFirstObjectByType<PlayerMovement>().Anim.SetBool("isRunning",false);
+        FindFirstObjectByType<DieScript>().enabled = false;
+        FindFirstObjectByType<PlayerMovement>().Anim.SetBool("isRunning",true);
         FindFirstObjectByType<PlayerMovement>().Anim.SetBool("isJumping", false);
-        FindFirstObjectByType<PlayerMovement>().Anim.Play("Idle");
+        FindFirstObjectByType<PlayerMovement>().Anim.Play("run");
         FindFirstObjectByType<PlayerMovement>().enabled = false;
 
         yield return new WaitForSeconds(0.411f);
