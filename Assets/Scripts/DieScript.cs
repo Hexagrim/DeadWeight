@@ -1,10 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DieScript : MonoBehaviour
 {
     public GameObject corpse;
     public Transform SpawnPos;
-    
+
+    bool dead = false;
     void Start()
     {
     
@@ -17,10 +20,23 @@ public class DieScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Instantiate(corpse,transform.position,Quaternion.identity);
-            transform.position = SpawnPos.position;
+            Die();
         }
 
+    }
+    void Die()
+    {
+        Instantiate(corpse, transform.position, Quaternion.identity);
+        transform.position = SpawnPos.position;
+        dead = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Spike") && !dead)
+        {
+            dead = true;
+            Die();
+        }
     }
 }
 
