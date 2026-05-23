@@ -35,5 +35,10 @@ public class MouseCam : MonoBehaviour
             -10f
         );
         }
+        // this condition makes the cam snap to the curr pos of the cam so it doesnt stay on tghe same area for a few sedconds since the cam thing goes off screen when the camera is staticly stopped y the boundary boxes, did i just write an eaasy here?
+        if (Input.GetMouseButtonUp(0))
+        {
+            Cam.transform.position = FindFirstObjectByType<Camera>().transform.position;
+        }
     }
 }
