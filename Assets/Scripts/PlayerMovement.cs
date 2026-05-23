@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if ((isInWater || isGrounded) &&(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
             //rb.linearVelocityY = jumpSpeed;
-            rb.AddForceY(jumpSpeed * 50f);
+            rb.AddForceY(jumpSpeed * 52f);
             Anim.SetTrigger("takeoff");
         }
 

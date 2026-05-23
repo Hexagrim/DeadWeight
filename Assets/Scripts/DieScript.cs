@@ -16,6 +16,8 @@ public class DieScript : MonoBehaviour
     public int Lives;
 
     public GameObject DeathParticle;
+
+    public LayerMask noRagdollLayer;
     void Start()
     {
 
@@ -26,7 +28,7 @@ public class DieScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && Lives > 0f)
+        if (Input.GetKeyDown(KeyCode.E) && Lives > 0f && !Physics2D.OverlapCircle(transform.position,0.3f,noRagdollLayer))
         {
             Die();
         }

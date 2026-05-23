@@ -2592,8 +2592,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DieScript
   corpse: {fileID: 1578757473926778320, guid: 664c1295e0bfb2f4a921f51922c66cd8, type: 3}
   SpawnPos: {fileID: 1867157568}
-  Lives: 20
+  Lives: 5
   DeathParticle: {fileID: 2339029852114410443, guid: 4498e509b00103943b56315c50cad95f, type: 3}
+  noRagdollLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &461627870
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3174,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3257,10 +3261,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.4507576
     y: 0
-    width: 1
-    height: 1
+    width: 0.49158254
+    height: 0.49158248
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3352,7 +3356,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
@@ -3369,6 +3373,19 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fea88dcb695f74d95c1ad765989c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AspectRatio
+  targetAspectRatio: 1.7777778
 --- !u!1 &540843186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,6 +3813,55 @@ Transform:
   m_Children:
   - {fileID: 682893395}
   - {fileID: 929694578}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &661426742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661426744}
+  - component: {fileID: 661426743}
+  m_Layer: 0
+  m_Name: MouseExplosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &661426743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661426742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd14baba92640054a9eb1930a4e6d2c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseExplosion
+  cam: {fileID: 519420031}
+  particle: {fileID: 2339029852114410443, guid: e2c6b1ac98a772b479b9e2b64a75b5dc, type: 3}
+  radius: 3
+  force: 20
+  cooldown: 1
+--- !u!4 &661426744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661426742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.7, y: 13.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &682893392
@@ -31923,7 +31989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1624023316
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31940,8 +32006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -150}
-  m_SizeDelta: {x: 383.93, y: 192.88}
+  m_AnchoredPosition: {x: -259, y: 136}
+  m_SizeDelta: {x: 322.64, y: 192.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624023317
 MonoBehaviour:
@@ -31963,7 +32029,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'R to reset
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 832c1ce0bb5390f40bee8fc9316f449d, type: 2}
   m_sharedMaterial: {fileID: 8628780040454658308, guid: 832c1ce0bb5390f40bee8fc9316f449d, type: 2}
@@ -39241,3 +39309,4 @@ SceneRoots:
   - {fileID: 85232935}
   - {fileID: 1342485964}
   - {fileID: 1788134679}
+  - {fileID: 661426744}
