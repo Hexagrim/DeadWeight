@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class DieScript : MonoBehaviour
 
     TMP_Text livesTxt;
     public int Lives;
+
+    public GameObject DeathParticle;
     void Start()
     {
 
@@ -42,7 +45,10 @@ public class DieScript : MonoBehaviour
         }
         else
         {
+            Instantiate(DeathParticle,transform.position,Quaternion.identity);
             FindFirstObjectByType<GameManager>().Die();
+            FindFirstObjectByType<MouseCam>().enabled = false;
+            Destroy(this.gameObject);
         }
 
     }
