@@ -1,6 +1,8 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class DieScript : MonoBehaviour
 {
@@ -8,27 +10,41 @@ public class DieScript : MonoBehaviour
     public Transform SpawnPos;
 
     bool dead = false;
+
+    TMP_Text livesTxt;
+    public int Lives;
     void Start()
     {
-    
 
+        livesTxt = GameObject.FindWithTag("lives").GetComponent<TMP_Text>();
 
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && Lives > 0f)
         {
             Die();
         }
 
+        livesTxt.text = Lives.ToString();
+
     }
     void Die()
     {
-        Instantiate(corpse, transform.position, Quaternion.identity);
-        transform.position = SpawnPos.position;
-        dead = false;
+        if (Lives > 0f)
+        {
+            Instantiate(corpse, transform.position, Quaternion.identity);
+            transform.position = SpawnPos.position;
+            Lives -= 1;
+            dead = false;
+        }
+        else
+        {
+            FindFirstObjectByType<GameManager>().Die();
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

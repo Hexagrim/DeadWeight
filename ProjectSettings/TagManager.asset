@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Corpse
   - Spike
+  - lives
   layers:
   - Default
   - TransparentFX

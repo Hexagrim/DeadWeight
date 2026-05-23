@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(NextLevel(l));
         done = true;
     }
+    public void Die()
+    {
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().name));
+        done = true;
+    }
     IEnumerator NextLevel(string l)
     {
         T_Anim.SetTrigger("fade");
