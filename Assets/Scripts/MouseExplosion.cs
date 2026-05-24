@@ -47,7 +47,7 @@ public class MouseExplosion : MonoBehaviour
 
                     dir.Normalize();
 
-                    rb.AddForce((dir + Vector2.up * 0.3f) * force * power, ForceMode2D.Impulse);
+                    rb.AddForce((dir + Vector2.up * 0.3f) * force * power * 0.67f, ForceMode2D.Impulse);
 
                     HingeJoint2D hinge = hit.GetComponent<HingeJoint2D>();
 

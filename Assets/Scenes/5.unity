@@ -31499,7 +31499,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Left Click to explode the corpse
+  m_text: Right Click to explode the corpse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 832c1ce0bb5390f40bee8fc9316f449d, type: 2}
   m_sharedMaterial: {fileID: 8628780040454658308, guid: 832c1ce0bb5390f40bee8fc9316f449d, type: 2}
