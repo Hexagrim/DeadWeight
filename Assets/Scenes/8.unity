@@ -3386,10 +3386,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.4507576
     y: 0
-    width: 1
-    height: 1
+    width: 0.49158254
+    height: 0.49158248
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -34132,7 +34132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7837701298156c24fa5419636a87a52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  NextLevel: SampleScene
+  NextLevel: 9
 --- !u!4 &2074216635
 Transform:
   m_ObjectHideFlags: 0

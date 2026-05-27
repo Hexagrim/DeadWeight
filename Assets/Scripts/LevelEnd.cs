@@ -1,15 +1,21 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour
 {
     public string NextLevel;
     private Animator Anim;
     bool done = false;
+    private int level;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Anim = GetComponent<Animator>();
+        if (int.TryParse(SceneManager.GetActiveScene().name, out (level))){
+            level = int.Parse(SceneManager.GetActiveScene().name);
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +39,8 @@ public class LevelEnd : MonoBehaviour
             }
                 Anim.SetTrigger("exit");
             FindFirstObjectByType<GameManager>().Next(NextLevel);
+            PlayerPrefs.SetInt("maxLevel",level+1);
+            PlayerPrefs.Save();
         }
     }
     IEnumerator MoveToPosition(Transform obj, Vector3 targetPos, float duration)
@@ -51,4 +59,5 @@ public class LevelEnd : MonoBehaviour
 
         obj.position = targetPos;
     }
+
 }

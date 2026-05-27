@@ -34404,7 +34404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7837701298156c24fa5419636a87a52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  NextLevel: SampleScene
+  NextLevel: 5
 --- !u!4 &2074216635
 Transform:
   m_ObjectHideFlags: 0
