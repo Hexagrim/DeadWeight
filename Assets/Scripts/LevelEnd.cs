@@ -39,7 +39,10 @@ public class LevelEnd : MonoBehaviour
             }
                 Anim.SetTrigger("exit");
             FindFirstObjectByType<GameManager>().Next(NextLevel);
-            PlayerPrefs.SetInt("maxLevel",level+1);
+            if (PlayerPrefs.GetInt("maxLevel", 1) < level + 1)
+            {
+                PlayerPrefs.SetInt("maxLevel", level + 1);
+            }
             PlayerPrefs.Save();
         }
     }
